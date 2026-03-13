@@ -637,8 +637,7 @@
                 <!-- Why Attend -->
                 <div class="form-group">
                     <label>Why Do You Want to Attend The Arya Edge? <span class="required">*</span></label>
-                    <textarea name="why_attend" required placeholder="Share what you hope to learn or achieve by attending this seminar (minimum 50 words)..." id="whyAttend" oninput="updateCharCount()"></textarea>
-                    <div class="char-counter" id="charCounter">0 words (minimum 50 required)</div>
+                    <textarea name="why_attend" required placeholder="Share what you hope to learn or achieve by attending this seminar..." id="whyAttend"></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn" id="submitBtn">
@@ -701,14 +700,6 @@
         document.getElementById('registrationForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Validate word count
-            const whyAttend = document.getElementById('whyAttend').value;
-            const wordCount = whyAttend.trim().split(/\s+/).filter(word => word.length > 0).length;
-            if (wordCount < 50) {
-                alert('Please write at least 50 words about why you want to attend.');
-                return;
-            }
-
             // Validate destinations
             const destinations = document.querySelectorAll('input[name="destinations"]:checked');
             if (destinations.length === 0) {
