@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Arya Edge | Registration</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1955772468642728');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1955772468642728&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
         :root {
             --navy: #1A365D;
@@ -135,6 +154,36 @@
             font-size: 13px;
             opacity: 0.9;
             line-height: 1.5;
+        }
+
+        /* Website Button in Header */
+        .website-btn-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .website-btn-header:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(201, 162, 39, 0.3);
+        }
+
+        .website-btn-header svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
 
         /* Form */
@@ -357,6 +406,11 @@
             font-weight: 500;
         }
 
+        .footer a {
+            color: inherit;
+            text-decoration: none;
+        }
+
         /* Success Message */
         .success-message {
             display: none;
@@ -366,25 +420,143 @@
             border-radius: 0 0 20px 20px;
         }
 
-        .success-message svg {
-            width: 80px;
-            height: 80px;
-            fill: var(--success);
-            margin-bottom: 25px;
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--success) 0%, #20c997 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease;
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: var(--white);
         }
 
         .success-message h2 {
             color: var(--navy);
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 15px;
         }
 
-        .success-message p {
+        .success-message .success-subtitle {
             color: var(--dark-gray);
             font-size: 16px;
             line-height: 1.6;
-            max-width: 400px;
-            margin: 0 auto;
+            max-width: 450px;
+            margin: 0 auto 30px;
+        }
+
+        .success-details {
+            background: var(--light-gold);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .success-details h3 {
+            color: var(--navy);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .success-details p {
+            color: var(--dark-gray);
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .success-details p svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--gold);
+        }
+
+        .success-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        .success-cta-section {
+            margin-top: 30px;
+        }
+
+        .success-cta-section h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .success-cta-section p {
+            color: var(--dark-gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .website-btn-success {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--navy) 0%, #0D1B2A 100%);
+            border: none;
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .website-btn-success:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.4);
+        }
+
+        .website-btn-success svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gold);
+        }
+
+        .success-footer {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #E0E0E0;
+        }
+
+        .success-footer p {
+            color: var(--dark-gray);
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .success-footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
         }
 
         /* Loading Spinner */
@@ -425,22 +597,14 @@
             .checkbox-item {
                 flex: 1 1 100%;
             }
-        }
 
-        /* Character Counter */
-        .char-counter {
-            text-align: right;
-            font-size: 12px;
-            color: #888;
-            margin-top: 5px;
-        }
+            .success-message {
+                padding: 40px 25px;
+            }
 
-        .char-counter.warning {
-            color: var(--error);
-        }
-
-        .char-counter.success {
-            color: var(--success);
+            .success-message h2 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
@@ -478,6 +642,12 @@
                 <div class="speaker-name">With Mr. Rajesh Arya</div>
                 <div class="speaker-credentials">35+ Years Experience | 39,000+ Success Stories<br>Pioneer in Career Counseling & Study Abroad Choices</div>
             </div>
+
+            <!-- Website Button -->
+            <a href="https://www.studyingoverseas.com" target="_blank" class="website-btn-header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Visit Our Website
+            </a>
         </div>
 
         <!-- Form -->
@@ -491,37 +661,31 @@
                 <!-- Parent Details Section -->
                 <div class="form-section-title">Parent/Guardian Details</div>
 
-                <!-- Father Name -->
                 <div class="form-group">
                     <label>Father's Full Name <span class="required">*</span></label>
                     <input type="text" name="father_name" required placeholder="Enter father's full name">
                 </div>
 
-                <!-- Father Mobile -->
                 <div class="form-group">
                     <label>Father's Mobile Number (WhatsApp) <span class="required">*</span></label>
                     <input type="tel" name="father_mobile" required placeholder="+91 98100 88750" pattern="[0-9+\s-]{10,15}">
                 </div>
 
-                <!-- Mother Name -->
                 <div class="form-group">
                     <label>Mother's Full Name <span class="required">*</span></label>
                     <input type="text" name="mother_name" required placeholder="Enter mother's full name">
                 </div>
 
-                <!-- Mother Mobile -->
                 <div class="form-group">
                     <label>Mother's Mobile Number (WhatsApp) <span class="required">*</span></label>
                     <input type="tel" name="mother_mobile" required placeholder="+91 98100 88750" pattern="[0-9+\s-]{10,15}">
                 </div>
 
-                <!-- Email -->
                 <div class="form-group">
                     <label>Email Address <span class="required">*</span></label>
                     <input type="email" name="email" required placeholder="your.email@example.com">
                 </div>
 
-                <!-- Student Name -->
                 <div class="form-section-title">Student Details</div>
                 
                 <div class="form-group">
@@ -529,7 +693,6 @@
                     <input type="text" name="student_name" required placeholder="Enter student's name">
                 </div>
 
-                <!-- Grade -->
                 <div class="form-group">
                     <label>Student's Current Grade <span class="required">*</span></label>
                     <select name="grade" required>
@@ -541,13 +704,11 @@
                     </select>
                 </div>
 
-                <!-- School -->
                 <div class="form-group">
                     <label>School Name <span class="required">*</span></label>
                     <input type="text" name="school" required placeholder="Enter school name">
                 </div>
 
-                <!-- Destinations -->
                 <div class="form-section-title">Study Abroad Preferences</div>
                 
                 <div class="form-group">
@@ -576,7 +737,6 @@
                     </div>
                 </div>
 
-                <!-- Journey Stage -->
                 <div class="form-group">
                     <label>Where Are You in Your Study Abroad Journey? <span class="required">*</span></label>
                     <div class="radio-group">
@@ -599,7 +759,6 @@
                     </div>
                 </div>
 
-                <!-- Biggest Concern -->
                 <div class="form-group">
                     <label>What Is Your Biggest Concern? <span class="required">*</span></label>
                     <div class="radio-group">
@@ -634,7 +793,6 @@
                     </div>
                 </div>
 
-                <!-- Why Attend -->
                 <div class="form-group">
                     <label>Why Do You Want to Attend The Arya Edge? <span class="required">*</span></label>
                     <textarea name="why_attend" required placeholder="Share what you hope to learn or achieve by attending this seminar..." id="whyAttend"></textarea>
@@ -649,72 +807,82 @@
 
         <!-- Success Message -->
         <div class="success-message" id="successMessage">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            <h2>Registration Received!</h2>
-            <p>Thank you for registering for The Arya Edge. We will confirm your seat within 48 hours. Limited to 80 families only.</p>
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            
+            <h2>Registration Successful!</h2>
+            <p class="success-subtitle">Thank you for registering for <strong>The Arya Edge</strong>. We will confirm your seat within 48 hours via WhatsApp.</p>
+            
+            <div class="success-details">
+                <h3>📅 Event Details</h3>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                    Saturday, April 18, 2026 | 11:00 AM – 3:00 PM
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Gulmohar Hall, India Habitat Centre, New Delhi
+                </p>
+            </div>
+
+            <div class="success-divider"></div>
+
+            <div class="success-cta-section">
+                <h3>Explore Our Services</h3>
+                <p>Learn more about how we've helped 39,000+ students achieve their study abroad dreams</p>
+                
+                <a href="https://www.studyingoverseas.com" target="_blank" class="website-btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    Visit studyingoverseas.com
+                </a>
+            </div>
+
+            <div class="success-footer">
+                <p>Questions? Call us at <a href="tel:+919810088750">+91 9810088750</a></p>
+            </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
             <p>For Serious Families Only — By Registration Only</p>
-            <div class="contact">📞 +91 9810088750 | 🌐 studyingoverseas.com</div>
+            <div class="contact">📞 +91 9810088750 | 🌐 <a href="https://www.studyingoverseas.com" target="_blank">studyingoverseas.com</a></div>
         </div>
     </div>
 
     <script>
-        // Toggle checkbox styling
         function toggleCheckbox(item) {
             const checkbox = item.querySelector('input[type="checkbox"]');
             checkbox.checked = !checkbox.checked;
             item.classList.toggle('selected', checkbox.checked);
         }
 
-        // Select radio styling
         function selectRadio(item, groupName) {
             const radioItems = document.querySelectorAll(`input[name="${groupName}"]`);
             radioItems.forEach(radio => {
                 radio.closest('.radio-item').classList.remove('selected');
             });
-            
             const radio = item.querySelector('input[type="radio"]');
             radio.checked = true;
             item.classList.add('selected');
         }
 
-        // Word counter
-        function updateCharCount() {
-            const textarea = document.getElementById('whyAttend');
-            const counter = document.getElementById('charCounter');
-            const words = textarea.value.trim().split(/\s+/).filter(word => word.length > 0).length;
-            
-            counter.textContent = `${words} words (minimum 50 required)`;
-            
-            if (words < 50) {
-                counter.className = 'char-counter warning';
-            } else {
-                counter.className = 'char-counter success';
-            }
-        }
-
-        // Form submission
+        // Form submission with Meta Pixel + CAPI
         document.getElementById('registrationForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Validate destinations
             const destinations = document.querySelectorAll('input[name="destinations"]:checked');
             if (destinations.length === 0) {
                 alert('Please select at least one study destination.');
                 return;
             }
 
-            // Validate journey
             const journey = document.querySelector('input[name="journey"]:checked');
             if (!journey) {
                 alert('Please select your study abroad journey stage.');
                 return;
             }
 
-            // Validate concern
             const concern = document.querySelector('input[name="concern"]:checked');
             if (!concern) {
                 alert('Please select your biggest concern.');
@@ -728,47 +896,48 @@
             submitBtn.style.display = 'none';
             spinner.style.display = 'block';
 
-            // Collect form data
             const formData = new FormData(this);
-            
-            // Get destinations as comma-separated
-            const selectedDestinations = Array.from(destinations).map(d => d.value).join(', ');
+            const selectedDestinations = Array.from(destinations).map(d => d.value);
             
             const data = {
-                timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-                father_name: formData.get('father_name'),
-                father_mobile: formData.get('father_mobile'),
-                mother_name: formData.get('mother_name'),
-                mother_mobile: formData.get('mother_mobile'),
+                fatherName: formData.get('father_name'),
+                fatherMobile: formData.get('father_mobile'),
+                motherName: formData.get('mother_name'),
+                motherMobile: formData.get('mother_mobile'),
                 email: formData.get('email'),
-                student_name: formData.get('student_name'),
+                studentName: formData.get('student_name'),
                 grade: formData.get('grade'),
                 school: formData.get('school'),
                 destinations: selectedDestinations,
-                journey: journey.value,
+                journeyStage: journey.value,
                 concern: concern.value,
-                why_attend: formData.get('why_attend')
+                whyAttend: formData.get('why_attend')
             };
 
             try {
-                // ============================================
-                // GOOGLE SCRIPT URL - CONNECTED!
-                // ============================================
-                
-                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxGiPHa3pm9Bg2LsqplcBTTOVZbVyyPa4iZzrBBEPVWwMOgmLUkrxHp90WRkXpBxo7ZWA/exec';
+                // Apps Script with Meta CAPI integration
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyjt4Gsh9O5zTvhT8kfSQA134PtHJ7IGL3_Co7Ztr5mmA2pIFVJZj_T2jwVbZY3V6A/exec';
                 
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
 
-                // Show success
+                // Fire Meta Pixel Lead event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: 'The Arya Edge Registration',
+                        content_category: 'Event Registration',
+                        value: 0,
+                        currency: 'INR'
+                    });
+                }
+
                 document.getElementById('formContainer').style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
                 
             } catch (error) {
                 console.error('Error:', error);
@@ -779,60 +948,5 @@
             }
         });
     </script>
-
-    <!--
-    ============================================
-    GOOGLE SHEETS INTEGRATION SETUP INSTRUCTIONS
-    ============================================
-    
-    Step 1: Create a Google Sheet
-    - Go to sheets.google.com and create a new sheet
-    - Name it "The Arya Edge Registrations"
-    - Add these headers in Row 1:
-      A: Timestamp | B: Father Name | C: Father Mobile | D: Mother Name | E: Mother Mobile | F: Email | G: Student Name | H: Grade | I: School | J: Destinations | K: Journey Stage | L: Concern | M: Why Attend
-
-    Step 2: Create Google Apps Script
-    - In your Google Sheet, go to Extensions > Apps Script
-    - Delete any code there and paste this:
-
-    function doPost(e) {
-      var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-      var data = JSON.parse(e.postData.contents);
-      
-      sheet.appendRow([
-        data.timestamp,
-        data.father_name,
-        data.father_mobile,
-        data.mother_name,
-        data.mother_mobile,
-        data.email,
-        data.student_name,
-        data.grade,
-        data.school,
-        data.destinations,
-        data.journey,
-        data.concern,
-        data.why_attend
-      ]);
-      
-      return ContentService.createTextOutput(JSON.stringify({status: 'success'}))
-        .setMimeType(ContentService.MimeType.JSON);
-    }
-
-    Step 3: Deploy the Script
-    - Click "Deploy" > "New deployment"
-    - Select "Web app"
-    - Set "Execute as" to "Me"
-    - Set "Who has access" to "Anyone"
-    - Click "Deploy"
-    - Copy the Web app URL
-
-    Step 4: Update This Form
-    - Find the line: const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
-    - Replace YOUR_GOOGLE_APPS_SCRIPT_URL with your actual URL
-    - Save and you're done!
-
-    ============================================
-    -->
 </body>
 </html>
